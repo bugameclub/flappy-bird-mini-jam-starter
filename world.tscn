@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://dqut3omghc5l2"]
+
+[ext_resource type="Texture2D" uid="uid://c1m2chdbh6opx" path="res://assets/flappy-background.png" id="1_f3sb7"]
+[ext_resource type="Texture2D" uid="uid://bp6uhuoxbi3lr" path="res://assets/flappy-ground.png" id="2_fj7yv"]
+
+[node name="World" type="Node2D" unique_id=1060578155]
+metadata/_edit_lock_ = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1668462273]
+z_index = 10
+position = Vector2(576, 324)
+
+[node name="Decoration" type="Node2D" parent="." unique_id=1017637593]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Background" type="Parallax2D" parent="Decoration" unique_id=858955312]
+scroll_scale = Vector2(0.25, 0.25)
+repeat_size = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Decoration/Background" unique_id=1868788716]
+scale = Vector2(4, 4)
+texture = ExtResource("1_f3sb7")
+centered = false
+offset = Vector2(0, -80)
+
+[node name="Ground" type="Parallax2D" parent="Decoration" unique_id=2123479841]
+repeat_size = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Decoration/Ground" unique_id=1420778077]
+scale = Vector2(4, 4)
+texture = ExtResource("2_fj7yv")
+centered = false
+offset = Vector2(0, 132)
